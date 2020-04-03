@@ -9,7 +9,7 @@ class Triangle
   end
 
   def kind
-    if [side_1, side_2, side_3].any?(|side| side <= 0) || (side_1+side_2<side_3) || (side_2+side_3<side_1) || (side_1+side_3<side_2)
+    if [side_1, side_2, side_3].any?{|side| side <= 0} || (side_1+side_2<side_3) || (side_2+side_3<side_1) || (side_1+side_3<side_2)
       raise TriangleError
     elsif side_1 == side_2 && side_2 == side_3
       :equilateral
