@@ -11,7 +11,9 @@ class Triangle
   def kind
     if [side_1, side_2, side_3].any?(|side| side <= 0)
       raise TriangleError
-    end
+    elsif (side_1+side_2<side_3) || (side_2+side_3<side_1) || 
+
+
   end
 
   class TriangleError < StandardError
